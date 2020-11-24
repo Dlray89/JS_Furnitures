@@ -2,7 +2,7 @@
 
 ## Welcome to a basic UI project! 👋
 
-> Thank you again for stopping by to check out another one of my UI projects. This is a UI project displaying a landing page for a furniture company called JS_Furnitures. This was a fun project to built out because it really challenge my techinical skills when it came to CSS for the most part. 
+> Thank you again for stopping by to check out another one of my UI projects. This is a UI project displaying a landing page for a furniture company called JS_Furnitures. This was a fun project to built out because it really challenges my technical skills when it came to CSS for the most part. 
 
 ## How to git started with this project:
     * Install NPM or Yarn

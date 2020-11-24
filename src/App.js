@@ -13,7 +13,6 @@ import pic_three from './images/pic_three.jpg'
 import bottom_pic_L from './images/bottom_pic_L.jpg'
 import bottom_pic_R from './images/bottom_pic_R.jpg'
 
-import { pictures } from './Containers/pictures'
 
 
 

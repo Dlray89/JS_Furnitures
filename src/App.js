@@ -228,38 +228,32 @@ const styles = theme => ({
       color:'black'
     }
   },
-  bottomNavContainer:{
-    
+  bottomNavContainer:{ 
     display:'flex',
     background:'black',
     boxSizing:'border-box',
     justifyContent:'space-between',
-    [theme.breakpoints.down('xs')]:{
-      
+    [theme.breakpoints.down('xs')]:{     
       boxSizing:'border-box',
       
     }
   },
-  bcBox_one:{
-    
+  bcBox_one:{   
     width:'10%',
     color:'white',
     textAlign:'center',
     boxSizing:'border-box',
-    [theme.breakpoints.down('xs')]:{
-      
+    [theme.breakpoints.down('xs')]:{      
       width:'30%',
       boxSizing:'border-box'
     }
   },
-  bcBox_two:{
-    
+  bcBox_two:{   
     width:'40%',
     color:'white',
     textAlign:'center',
     boxSizing:'border-box',
     [theme.breakpoints.down('xs')]:{
-      
       textAlign:'center',
       boxSizing:'border-box'
     }
@@ -267,13 +261,11 @@ const styles = theme => ({
     
   },
   bcBox_three:{
-    
     width:'20%',
     color:'white',
     textAlign:'center',
     boxSizing:'border-box',
     [theme.breakpoints.down('xs')]:{
-      
       width:'30%',
       boxSizing:'border-box'
     }
@@ -294,7 +286,6 @@ const styles = theme => ({
     }
   },
   links:{
-    
     width:'50%',
     boxSizing:'border-box',
     [theme.breakpoints.down('xs')]:{

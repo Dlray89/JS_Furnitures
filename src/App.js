@@ -219,11 +219,94 @@ const styles = theme => ({
   },
   button:{
     background:'rgba(27, 20, 17, 0.8)',
+    
 
   },
   icon:{
-    color:'white'
-  }
+    color:'white',
+    '&:hover':{
+      color:'black'
+    }
+  },
+  bottomNavContainer:{
+    
+    display:'flex',
+    background:'black',
+    boxSizing:'border-box',
+    justifyContent:'space-between',
+    [theme.breakpoints.down('xs')]:{
+      
+      boxSizing:'border-box',
+      
+    }
+  },
+  bcBox_one:{
+    
+    width:'10%',
+    color:'white',
+    textAlign:'center',
+    boxSizing:'border-box',
+    [theme.breakpoints.down('xs')]:{
+      
+      width:'30%',
+      boxSizing:'border-box'
+    }
+  },
+  bcBox_two:{
+    
+    width:'40%',
+    color:'white',
+    textAlign:'center',
+    boxSizing:'border-box',
+    [theme.breakpoints.down('xs')]:{
+      
+      textAlign:'center',
+      boxSizing:'border-box'
+    }
+   
+    
+  },
+  bcBox_three:{
+    
+    width:'20%',
+    color:'white',
+    textAlign:'center',
+    boxSizing:'border-box',
+    [theme.breakpoints.down('xs')]:{
+      
+      width:'30%',
+      boxSizing:'border-box'
+    }
+  },  
+  linkContainer:{
+    width:'100%',
+    display:'flex',
+    justifyContent: 'space-between',
+    marginTop:'2%',
+    boxSizing:'border-box',
+    [theme.breakpoints.down('xs')]:{
+      borderLeft:'solid 1px white',
+      borderRight:'solid 1px white',
+      flexDirection:'column',
+      textAlign:'center',
+      margin:'0 auto',
+      boxSizing:'border-box'
+    }
+  },
+  links:{
+    
+    width:'50%',
+    boxSizing:'border-box',
+    [theme.breakpoints.down('xs')]:{
+      flexDirection:'column',
+      textAlign:'center',
+      margin:'0 auto',
+      boxSizing:'border-box'
+    }
+
+
+  },
+
   
 });
 
@@ -328,6 +411,33 @@ render(){
         <div className={classes.cTwo_box_3}>
 
         </div>
+      </div>
+
+
+      <div className={classes.bottomNavContainer}>
+
+        <div className={classes.bcBox_one}>
+          <p className={classes.bcBox_one_text}>
+            JSFurnitures
+          </p>
+
+        </div>
+
+        <div className={classes.bcBox_two}>
+            <div className={classes.linkContainer}>
+              <a className={classes.links}>Home</a>
+              <a className={classes.links}>Shop</a>
+              <a className={classes.links}>About</a>
+              <a className={classes.links}>Contact</a>
+            </div>
+        </div>
+
+        <div className={classes.bcBox_three}>
+            <p className={classes.bcBox_three_text}>
+              &copy; Designed by Dapthedev
+            </p>
+        </div>
+
       </div>
 
 

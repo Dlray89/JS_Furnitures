@@ -20,50 +20,95 @@ import bottom_pic_R from './images/bottom_pic_R.jpg'
 
 const styles = theme => ({
   rootBox:{
-   
+   [theme.breakpoints.down('xs')]:{
+     overFlowX:'hidden'
+   }
    
   },
   containerOne: {
   
     width:'100%',
-    display:'flex'
+    display:'flex',
+    [theme.breakpoints.down('xs')]:{
+     
+      flexDirection: 'column'
+    }
     
 
   },
   cOne_box_1:{
-    border: 'solid 2px green',
+    
     width:'83%',
     height:'70vh',
     backgroundRepeat:'no-repeat',
     backgroundSize:'100%',
     backgroundPositionX:'50%',
     backgroundPositionY:'60%',
-    boxSizing:'border-box'
+    boxSizing:'border-box',
+    [theme.breakpoints.down('xs')]:{
+     
+      width:'100%',
+      backgroundSize:'100%',
+      backgroundPositionY:'0%',
+      height:'40vh',
+      boxSizing:'border-box'
+
+    }
   },
   cOne_box_2:{
     width:'40%',
     padding:'3%',
-    boxSizing:'border-box'
+    boxSizing:'border-box',
+    [theme.breakpoints.down('xs')]:{
+     
+      width:'100%',
+      boxSizing:'border-box'
+
+    }
 
   },
   box_one:{
    
     width:'77.8%',
     margin:'0 auto',
-    boxSizing:'border-box'
+    boxSizing:'border-box',
+    [theme.breakpoints.down('xs')]:{
+      
+      width:'100%',
+      textAlign:'center',
+      boxSizing:'border-box'
+
+    }
   },
   box_two:{
   
     boxSizing:'border-box',
     width:'77.8%',
-    margin:'0 auto'
+    margin:'0 auto',
+    [theme.breakpoints.down('xs')]:{
+      
+      width:'100%',
+      textAlign:'center',
+      padding:'1%',
+      boxSizing:'border-box'
+
+    }
 
   },
   box_two_btn_box:{
   
     boxSizing:'border-box',
     width:'77.8%',
-    margin:'2% auto'
+    margin:'2% auto',
+    [theme.breakpoints.down('xs')]:{
+      
+      width:'100%',
+      textAlign:'center',
+      padding:'1%',
+      boxSizing:'border-box'
+
+    }
+    
 
   },
   pictureBtn:{
@@ -72,11 +117,24 @@ const styles = theme => ({
     position:'absolute',
     top:'62%',
     left:'65.8%',
-    padding:'1%'
+    padding:'1%',
+    [theme.breakpoints.down('xs')]:{
+      
+      top:'23%',
+      display:'flex',
+      width:'40%',
+      left:'60%'
+    }
   },
   container_two:{
    
-    display:'flex'
+    display:'flex',
+    [theme.breakpoints.down('xs')]:{
+      
+      flexDirection:'column',
+      boxSizing:'border-box'
+
+    }
   },
   cTwo_box_1:{
    
@@ -87,12 +145,26 @@ const styles = theme => ({
     backgroundSize:'100%',
     backgroundPositionX:'50%',
     backgroundPositionY:'60%',
-    boxSizing:'border-box'
+    boxSizing:'border-box',
+    [theme.breakpoints.down('xs')]:{
+      
+      flexDirection:'column',
+      width:'100%',
+      backgroundPositionY:'0%',
+      height:'28vh',
+      boxSizing:'border-box'
+
+    }
   },
 
   cTwo_box_2:{
    
-    width:'40%'
+    width:'40%',
+    [theme.breakpoints.down('xs')]:{
+     
+      width:'100%',
+      boxSizing:'border-box'
+    }
   },
   cTwo_box_2_Title: {
    
@@ -101,7 +173,12 @@ const styles = theme => ({
     padding:'2%',
     margin:'0 auto',
     width:'93%',
-    marginTop:'6%'
+    marginTop:'6%',
+    [theme.breakpoints.down('xs')]:{
+     
+      width:'100%',
+      boxSizing:'border-box'
+    }
 
 
   },
@@ -111,7 +188,12 @@ const styles = theme => ({
     boxSizing:'border-box',
     padding:'2%',
     margin:'0 auto',
-    width:'93%'
+    width:'93%',
+    [theme.breakpoints.down('xs')]:{
+     
+      width:'100%',
+      boxSizing:'border-box'
+    }
 
 
   },
@@ -124,7 +206,23 @@ const styles = theme => ({
     backgroundSize:'100%',
     backgroundPositionX:'50%',
     backgroundPositionY:'60%',
-    boxSizing:'border-box'
+    boxSizing:'border-box',
+    [theme.breakpoints.down('xs')]:{
+      
+      flexDirection:'column',
+      width:'100%',
+      backgroundPositionY:'0%',
+      height:'28vh',
+      boxSizing:'border-box'
+    }
+
+  },
+  button:{
+    background:'rgba(27, 20, 17, 0.8)',
+
+  },
+  icon:{
+    color:'white'
   }
   
 });
@@ -205,8 +303,8 @@ render(){
           </div>
 
           <div className={classes.pictureBtn}>
-            <Button variant='outlined' onClick={this.onClickBack}> <ChevronLeftIcon /> </Button>
-            <Button variant='outlined' onClick={this.onClickForward}>  <ChevronRightIcon /> </Button>
+            <Button className={classes.button} variant='outlined' onClick={this.onClickBack}> <ChevronLeftIcon className={classes.icon} /> </Button>
+            <Button  className={classes.button} variant='outlined' onClick={this.onClickForward}>  <ChevronRightIcon className={classes.icon} /> </Button>
           </div>
           
         </div>

@@ -115,7 +115,7 @@ const styles = theme => ({
    
     boxSizing:'border-box',
     position:'absolute',
-    top:'62%',
+    top:'60.5%',
     left:'65.8%',
     padding:'1%',
     [theme.breakpoints.down('xs')]:{
@@ -219,6 +219,8 @@ const styles = theme => ({
   },
   button:{
     background:'rgba(27, 20, 17, 0.8)',
+    padding:'10%',
+    boxSizing:'border-box'
     
 
   },
@@ -368,7 +370,7 @@ render(){
             </p>
 
             <div className={classes.box_two_btn_box}>
-              <Button classes={{ width:'100%'}}>
+              <Button >
                 
                Shop Now
 

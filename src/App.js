@@ -418,10 +418,10 @@ render(){
 
         <div className={classes.bcBox_two}>
             <div className={classes.linkContainer}>
-              <a className={classes.links}>Home</a>
-              <a className={classes.links}>Shop</a>
-              <a className={classes.links}>About</a>
-              <a className={classes.links}>Contact</a>
+              <div className={classes.links}>Home</div>
+              <div className={classes.links}>Shop</div>
+              <div className={classes.links}>About</div>
+              <div className={classes.links}>Contact</div>
             </div>
         </div>
 

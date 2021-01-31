@@ -70,8 +70,8 @@ const useStyles = makeStyles((theme) => ({
   },
   textTitle: {
     padding: 0,
-    width: "80%",
-    fontSize: "2.5em",
+    width: "60%",
+    fontSize: "2em",
     fontFamily: "Spartan, sans-serif",
     fontWeight: 600,
     [theme.breakpoints.down("sm")]: {
@@ -80,12 +80,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   textSubtitle: {
-    width: "80%",
-    fontSize: "0.85em",
+    width: "60%",
+    fontSize: "0.75em",
     fontWeight: 400,
     opacity: "60%",
     fontFamily: "Spartan, sans-serif",
-    marginTop: "0.55em",
+    marginTop: "1em",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       fontSize: "1.5em",
@@ -130,9 +130,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   buttonContainer: {
-    width: "80%",
+    width: "60%",
     marginTop: "0.55em",
-    marginRight: "1.2em",
+    marginRight: "1.5em",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5em",
       marginTop: "auto",
@@ -146,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   bottomButtonContainer: {
-    marginTop: "3.83em",
+    marginTop: "5.35em",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
@@ -319,7 +319,7 @@ const LandingPage = () => {
   const mobileNav = (
     <React.Fragment>
       <IconButton onClick={handleSwitch}>
-        <MenuIcon />
+        <MenuIcon style={{color:'white', fontSize:'1.2em'}} />
       </IconButton>
     </React.Fragment>
   );

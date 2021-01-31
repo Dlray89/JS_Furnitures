@@ -7,9 +7,9 @@ import {
   MobileStepper,
   useTheme,
   useMediaQuery,
-  
-  // Dialog,
-  // IconButton,
+  Card,
+  Dialog,
+  IconButton,
 } from "@material-ui/core";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
@@ -25,7 +25,8 @@ import hero1 from "../../asset/images/mobile-image-hero-1.jpg";
 import hero2 from "../../asset/images/mobile-image-hero-2.jpg";
 import hero3 from "../../asset/images/mobile-image-hero-3.jpg";
 
-// import MenuIcon from "@material-ui/icons/Menu";
+import MenuIcon from "@material-ui/icons/Menu";
+import CancelIcon from '@material-ui/icons/Cancel';
 
 const useStyles = makeStyles((theme) => ({
   landingpage: {},
@@ -49,8 +50,6 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
       backgroundSize: "100%",
       backgroundPositionY: "75%",
-
-
     },
   },
   textMainContainer: {
@@ -58,9 +57,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
-      display: 'flex',
-      flexDirection:'column-reverse',
-
+      display: "flex",
+      flexDirection: "column-reverse",
     },
   },
   textContainer: {
@@ -102,37 +100,35 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "2em",
     marginLeft: "2em",
     width: "90%",
-    [theme.breakpoints.down('sm')]:{
-      marginRight:'10em',
-      width:'100%',
+    [theme.breakpoints.down("sm")]: {
+      marginRight: "10em",
+      width: "100%",
       margin: 0,
-      marginTop:"2em"
-    }
+      marginTop: "2em",
+    },
   },
   logoContainer: {
     marginRight: "2em",
-    [theme.breakpoints.down('sm')]:{
-      marginRight:'auto',
-      marginLeft:'3em'
-    }
+    [theme.breakpoints.down("sm")]: {
+      marginRight: "auto",
+      marginLeft: "3em",
+    },
   },
   linksContainer: {
     width: "50%",
-    [theme.breakpoints.down('sm')]:{
-      width:'70%'
-    }
-    
+    [theme.breakpoints.down("sm")]: {
+      width: "70%",
+    },
   },
   links: {
     color: "white",
     fontWeight: 400,
-    "&:hover":{
-      borderBottom: 'solid 2px white'
+    "&:hover": {
+      borderBottom: "solid 2px white",
     },
-    [theme.breakpoints.down('sm')]:{
-      fontSize:'1.5em' ,
-     
-    }
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.5em",
+    },
   },
   buttonContainer: {
     width: "80%",
@@ -154,10 +150,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "3.83em",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width:'100%',
-      marginLeft:'auto',
-
-     
+      width: "100%",
+      marginLeft: "auto",
     },
   },
   mobileStepper: {
@@ -167,20 +161,20 @@ const useStyles = makeStyles((theme) => ({
       margin: 0,
       width: "100%",
       marginLeft: "auto",
-      background:'#fff'
+      background: "#fff",
     },
   },
   leftIcon: {
     color: "white",
-    [theme.breakpoints.down('sm')]:{
-      color:'black'
-    }
+    [theme.breakpoints.down("sm")]: {
+      color: "black",
+    },
   },
   rightIcon: {
     color: "white",
-    [theme.breakpoints.down('sm')]:{
-      color:'black'
-    }
+    [theme.breakpoints.down("sm")]: {
+      color: "black",
+    },
   },
 
   aboutMainContainer: {},
@@ -243,6 +237,31 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "100%",
   },
+  mobileNav:{
+    borderRadius: 0,
+    padding:'5%'
+  },
+  firstCOntainer:{
+  },
+  mobileLinkContainer:{
+    width:'70%'
+
+  },
+  mobileLinks:{
+    fontSize:'2em',
+    '&:hover':{
+      color: 'grey',
+      
+    }
+  },
+  mobileButtonContainer:{
+    width:'20%'
+
+  },
+  mobileButton:{
+
+  }
+
 }));
 
 const roomHeaderDetails = [
@@ -251,21 +270,21 @@ const roomHeaderDetails = [
     subTitle:
       "We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.",
     img: one,
-    alt: 'table and chairs witha plant on the table'
+    alt: "table and chairs witha plant on the table",
   },
   {
     title: "We are available all across the globe",
     subTitle:
       "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.",
     img: two,
-    alt: 'three chair that are differwent colors'
+    alt: "three chair that are differwent colors",
   },
   {
     title: "Manufactured with the best materials",
     subTitle:
       "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.",
     img: three,
-    alt:'black chair turned at a certain angle'
+    alt: "black chair turned at a certain angle",
   },
 ];
 
@@ -277,15 +296,16 @@ const LandingPage = () => {
   const maxSteps = roomHeaderDetails.length;
   const theme = useTheme();
   const matchSM = useMediaQuery(theme.breakpoints.down("sm"));
-  // const [open, setOpen] = useState(false);
+  const [SwitchNav, setSwitchNav] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  // const handleOpen = () => {
-  //   setOpen(true);
-  // };
+  const handleSwitch = () => {
+    setSwitchNav(true);
+  };
 
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
+  const handleSwitchClose = () => {
+    setSwitchNav(false);
+  };
 
   const nextHeader = () => {
     setActiveSteps((prevSteps) => prevSteps + 1);
@@ -295,36 +315,21 @@ const LandingPage = () => {
     setActiveSteps((preveSteps) => preveSteps - 1);
   };
 
-  // const mobileNav = (
-  //   <React.Fragment>
-  //     <Dialog open={open} onClose={handleClose} PaperProps={{
-  //       style:{
-  //         width:'70%',
-  //         marginBottom:'37em'
-  //       }
-  //     }}>
-  //       <Grid style={{padding:'1em'}} justify='space-evenly' container direction={matchSM ? "row" :'row'}>
-  //         <Grid item>Home</Grid>
-  //         <Grid item>Shop</Grid>
-  //         <Grid item>About</Grid>
-  //         <Grid item>Contact</Grid>
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
-          
-          
-  //       </Grid>
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-       
-
-
-    
-        
-  //     </Dialog>
-
-  //     <IconButton onClick={handleOpen}>
-  //       <MenuIcon />
-  //     </IconButton>
-  //   </React.Fragment>
-  // );
+  const mobileNav = (
+    <React.Fragment>
+      <IconButton onClick={handleSwitch}>
+        <MenuIcon />
+      </IconButton>
+    </React.Fragment>
+  );
 
   const desktopNav = (
     <React.Fragment>
@@ -373,19 +378,37 @@ const LandingPage = () => {
           item
           className={classes.imgContainer}
         >
-          <Grid
-            container
-            direction={matchSM ? "row" : "row"}
-            className={classes.navigation}
-            alignItems={matchSM ? 'center' : null}
-            justify={matchSM ? 'flex-start' : null}
-          >
-            <Grid item className={classes.logoContainer}>
-              <img src={Logo} alt='logo' />
-            </Grid>
+          {SwitchNav ? (
+            <Card className={classes.mobileNav}>
+              <Grid container direction='row-reverse' justify='space-between' alignItems='center' className={classes.firstCOntainer} >
+              <Grid item container justify='space-evenly' className={classes.mobileLinkContainer}>
+                <Grid item className={classes.mobileLinks}>Home</Grid>
+                <Grid item className={classes.mobileLinks}>Shop</Grid>
+                <Grid item className={classes.mobileLinks}>About</Grid>
+                <Grid item className={classes.mobileLinks}>Contact</Grid>
+              </Grid>
 
-            {desktopNav}
-          </Grid>
+              <Grid item container className={classes.mobileButtonContainer}>
+              <Button onClick={handleSwitchClose} item className={classes.mobileButton}> <CancelIcon  /></Button>
+
+              </Grid>
+              </Grid>
+            </Card>
+          ) : (
+            <Grid
+              container
+              direction={matchSM ? "row" : "row"}
+              className={classes.navigation}
+              alignItems={matchSM ? "center" : null}
+              justify={matchSM ? "flex-start" : null}
+            >
+              <Grid item className={classes.logoContainer}>
+                <img src={Logo} alt="logo" />
+              </Grid>
+
+              {matchSM ? mobileNav : desktopNav}
+            </Grid>
+          )}
         </Grid>
 
         <Grid item className={classes.textMainContainer}>
@@ -411,12 +434,12 @@ const LandingPage = () => {
             </Grid>
           </Grid>
 
-          <Grid item container  className={classes.bottomButtonContainer}>
+          <Grid item container className={classes.bottomButtonContainer}>
             <MobileStepper
               className={classes.mobileStepper}
               steps={maxSteps}
               position="static"
-              variant={matchSM ? 'dots' : null}
+              variant={matchSM ? "dots" : null}
               activeStep={activeSteps}
               nextButton={
                 <Button
@@ -448,7 +471,11 @@ const LandingPage = () => {
         className={classes.aboutMainContainer}
       >
         <Grid item className={classes.leftpicContainer}>
-          <img className={classes.leftPic} src={leftPic} alt='chairs and coffe tables' />
+          <img
+            className={classes.leftPic}
+            src={leftPic}
+            alt="chairs and coffe tables"
+          />
         </Grid>
 
         <Grid

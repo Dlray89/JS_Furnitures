@@ -249,6 +249,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mobileLinks:{
     fontSize:'2em',
+    fontWeight:500,
     '&:hover':{
       color: 'grey',
       

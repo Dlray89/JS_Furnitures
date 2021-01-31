@@ -8,8 +8,8 @@ import {
   useTheme,
   useMediaQuery,
   
-  Dialog,
-  IconButton,
+  // Dialog,
+  // IconButton,
 } from "@material-ui/core";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
@@ -25,7 +25,7 @@ import hero1 from "../../asset/images/mobile-image-hero-1.jpg";
 import hero2 from "../../asset/images/mobile-image-hero-2.jpg";
 import hero3 from "../../asset/images/mobile-image-hero-3.jpg";
 
-import MenuIcon from "@material-ui/icons/Menu";
+// import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles((theme) => ({
   landingpage: {},
@@ -277,15 +277,15 @@ const LandingPage = () => {
   const maxSteps = roomHeaderDetails.length;
   const theme = useTheme();
   const matchSM = useMediaQuery(theme.breakpoints.down("sm"));
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  // const handleOpen = () => {
+  //   setOpen(true);
+  // };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
 
   const nextHeader = () => {
     setActiveSteps((prevSteps) => prevSteps + 1);
@@ -295,36 +295,36 @@ const LandingPage = () => {
     setActiveSteps((preveSteps) => preveSteps - 1);
   };
 
-  const mobileNav = (
-    <React.Fragment>
-      <Dialog open={open} onClose={handleClose} PaperProps={{
-        style:{
-          width:'70%',
-          marginBottom:'37em'
-        }
-      }}>
-        <Grid style={{padding:'1em'}} justify='space-evenly' container direction={matchSM ? "row" :'row'}>
-          <Grid item>Home</Grid>
-          <Grid item>Shop</Grid>
-          <Grid item>About</Grid>
-          <Grid item>Contact</Grid>
+  // const mobileNav = (
+  //   <React.Fragment>
+  //     <Dialog open={open} onClose={handleClose} PaperProps={{
+  //       style:{
+  //         width:'70%',
+  //         marginBottom:'37em'
+  //       }
+  //     }}>
+  //       <Grid style={{padding:'1em'}} justify='space-evenly' container direction={matchSM ? "row" :'row'}>
+  //         <Grid item>Home</Grid>
+  //         <Grid item>Shop</Grid>
+  //         <Grid item>About</Grid>
+  //         <Grid item>Contact</Grid>
 
           
           
-        </Grid>
+  //       </Grid>
 
        
 
 
     
         
-      </Dialog>
+  //     </Dialog>
 
-      <IconButton onClick={handleOpen}>
-        <MenuIcon />
-      </IconButton>
-    </React.Fragment>
-  );
+  //     <IconButton onClick={handleOpen}>
+  //       <MenuIcon />
+  //     </IconButton>
+  //   </React.Fragment>
+  // );
 
   const desktopNav = (
     <React.Fragment>
@@ -411,7 +411,7 @@ const LandingPage = () => {
             </Grid>
           </Grid>
 
-          <Grid item container style={{left: open ? "-0.65em" : '1%'}} className={classes.bottomButtonContainer}>
+          <Grid item container  className={classes.bottomButtonContainer}>
             <MobileStepper
               className={classes.mobileStepper}
               steps={maxSteps}

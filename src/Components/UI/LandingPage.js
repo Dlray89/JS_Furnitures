@@ -45,9 +45,12 @@ const useStyles = makeStyles((theme) => ({
     width: "60%",
     [theme.breakpoints.down("sm")]: {
       fontSize: "0.45em",
-      height: "57em",
+      height: "50em",
       width: "100%",
       backgroundSize: "100%",
+      backgroundPositionY: "75%",
+
+
     },
   },
   textMainContainer: {
@@ -55,6 +58,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
+      display: 'flex',
+      flexDirection:'column-reverse',
+
     },
   },
   textContainer: {
@@ -72,8 +78,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Spartan, sans-serif",
     fontWeight: 600,
     [theme.breakpoints.down("sm")]: {
-      fontSize: "4em",
-      marginTop: "1em",
+      fontSize: "3em",
+      marginTop: "3em",
     },
   },
   textSubtitle: {
@@ -88,8 +94,8 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "1.5em",
       fontWeight: 600,
       opacity: "90%",
-      marginTop: "1em",
-      marginBottom: "2em",
+      marginTop: "2em",
+      marginBottom: "3em",
     },
   },
   navigation: {
@@ -99,7 +105,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]:{
       marginRight:'10em',
       width:'100%',
-      margin: 0
+      margin: 0,
+      marginTop:"2em"
     }
   },
   logoContainer: {
@@ -111,11 +118,21 @@ const useStyles = makeStyles((theme) => ({
   },
   linksContainer: {
     width: "50%",
+    [theme.breakpoints.down('sm')]:{
+      width:'70%'
+    }
     
   },
   links: {
     color: "white",
     fontWeight: 400,
+    "&:hover":{
+      borderBottom: 'solid 2px white'
+    },
+    [theme.breakpoints.down('sm')]:{
+      fontSize:'1.5em' ,
+     
+    }
   },
   buttonContainer: {
     width: "80%",
@@ -137,9 +154,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "3.83em",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      position: "absolute",
-      top: "58.6%",
-      width: "99%",
+      width:'100%',
+      marginLeft:'auto',
+
+     
     },
   },
   mobileStepper: {
@@ -147,15 +165,22 @@ const useStyles = makeStyles((theme) => ({
     width: "20.3%",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "30%",
+      width: "100%",
       marginLeft: "auto",
+      background:'#fff'
     },
   },
   leftIcon: {
     color: "white",
+    [theme.breakpoints.down('sm')]:{
+      color:'black'
+    }
   },
   rightIcon: {
     color: "white",
+    [theme.breakpoints.down('sm')]:{
+      color:'black'
+    }
   },
 
   aboutMainContainer: {},
@@ -359,7 +384,7 @@ const LandingPage = () => {
               <img src={Logo} alt='logo' />
             </Grid>
 
-            {matchSM ? mobileNav : desktopNav}
+            {desktopNav}
           </Grid>
         </Grid>
 
@@ -391,7 +416,7 @@ const LandingPage = () => {
               className={classes.mobileStepper}
               steps={maxSteps}
               position="static"
-              variant=""
+              variant={matchSM ? 'dots' : null}
               activeStep={activeSteps}
               nextButton={
                 <Button

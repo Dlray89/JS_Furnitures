@@ -8,7 +8,6 @@ import {
   useTheme,
   useMediaQuery,
   Card,
-  Dialog,
   IconButton,
 } from "@material-ui/core";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
@@ -298,7 +297,6 @@ const LandingPage = () => {
   const theme = useTheme();
   const matchSM = useMediaQuery(theme.breakpoints.down("sm"));
   const [SwitchNav, setSwitchNav] = useState(false);
-  const [open, setOpen] = useState(false);
 
   const handleSwitch = () => {
     setSwitchNav(true);
@@ -316,13 +314,7 @@ const LandingPage = () => {
     setActiveSteps((preveSteps) => preveSteps - 1);
   };
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   const mobileNav = (
     <React.Fragment>

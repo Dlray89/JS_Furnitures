@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
   textSubtitle: {
     width: "80%",
     fontSize: "0.85em",
-    fontWeight: 700,
+    fontWeight: 400,
     opacity: "60%",
     fontFamily: "Spartan, sans-serif",
     marginTop: "0.55em",
@@ -141,7 +141,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     fontFamily: "Spartan, sans-serif",
-    fontWeight: 800,
+    fontWeight: 400,
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.2em",
     },
@@ -215,7 +215,7 @@ const useStyles = makeStyles((theme) => ({
   aboutSubtitle: {
     fontFamily: "Spartan, sans-serif",
     textAlign: "left",
-    fontWeight: 600,
+    fontWeight: 400,
     width: "80%",
     margin: "0 auto",
     fontSize: "0.75em",

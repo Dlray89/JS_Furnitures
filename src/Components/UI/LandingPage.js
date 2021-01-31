@@ -78,8 +78,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Spartan, sans-serif",
     fontWeight: 600,
     [theme.breakpoints.down("sm")]: {
-      fontSize: "3em",
-      marginTop: "3em",
+      fontSize: "4em",
+      marginTop: "1em",
     },
   },
   textSubtitle: {

@@ -338,7 +338,7 @@ const LandingPage = () => {
 
   const mobileNav = (
     <React.Fragment>
-      <IconButton onClick={handleSwitch}>
+      <IconButton onClick={handleSwitch} onMouseEnter={handleSwitch} >
         <MenuIcon style={{color:'white', fontSize:'1em'}} />
       </IconButton>
     </React.Fragment>
@@ -352,6 +352,7 @@ const LandingPage = () => {
         direction="row"
         justify="space-evenly"
         className={classes.linksContainer}
+       
       >
         <Grid item className={classes.links}>
           Home
@@ -392,7 +393,7 @@ const LandingPage = () => {
           className={classes.imgContainer}
         >
           {SwitchNav ? (
-            <Card className={classes.mobileNav}>
+            <Card className={classes.mobileNav} onMouseLeave={handleSwitchClose}>
               <Grid container direction='row-reverse' justify='space-between' alignItems='center' className={classes.firstCOntainer} >
               <Grid item container justify='space-evenly' className={classes.mobileLinkContainer}>
                 <Grid item className={classes.mobileLinks}>Home</Grid>

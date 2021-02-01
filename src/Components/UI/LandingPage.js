@@ -77,7 +77,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     [theme.breakpoints.down("sm")]: {
       fontSize: "3em",
-      marginTop: "1em",
+      marginTop: "2em",
+      textAlign:'center',
+
     },
   },
   textSubtitle: {
@@ -88,12 +90,12 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Spartan, sans-serif",
     marginTop: "1em",
     [theme.breakpoints.down("sm")]: {
-      margin: 0,
+      margin: '2em auto',
       fontSize: "1.5em",
       fontWeight: 600,
-      opacity: "90%",
-      marginTop: "2em",
-      marginBottom: "2em",
+      opacity: "95%",
+     textAlign:'center',
+      width:'80%'
     },
   },
   navigation: {
@@ -137,6 +139,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5em",
       marginTop: "auto",
+      textAlign:'center',
+
     },
   },
   button: {
@@ -210,6 +214,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "1.4em",
       fontWeight: 1000,
       textDecoration: "bold",
+      textAlign:'center'
     },
   },
   aboutSubtitle: {
@@ -225,6 +230,7 @@ const useStyles = makeStyles((theme) => ({
       margin: "2em auto",
       fontSize: "0.75em",
       fontWeight: 800,
+      textAlign:'center'
     },
   },
   rightPicContainer: {

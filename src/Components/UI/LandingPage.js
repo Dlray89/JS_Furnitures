@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
   },
   textSubtitle: {
     width: "61%",
-    fontSize: "0.65em",
+    fontSize: "0.75em",
     fontWeight: 600,
     opacity: "60%",
     fontFamily: "Spartan, sans-serif",

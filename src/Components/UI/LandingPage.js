@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   textSubtitle: {
-    width: "61%",
+    width: "63%",
     fontSize: "0.75em",
     fontWeight: 600,
     opacity: "60%",

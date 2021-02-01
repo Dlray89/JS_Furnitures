@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   imgContainer: {
     backgroundRepeat: "no-repeat",
     backgroundSize: "100%",
-    backgroundPositionY: "25%",
+    backgroundPositionY: "65%",
     height: "100%",
     width: "60%",
     [theme.breakpoints.down("sm")]: {
@@ -58,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
       display: "flex",
       flexDirection: "column-reverse",
+
     },
   },
   textContainer: {
@@ -75,14 +76,14 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Spartan, sans-serif",
     fontWeight: 600,
     [theme.breakpoints.down("sm")]: {
-      fontSize: "4em",
+      fontSize: "3em",
       marginTop: "1em",
     },
   },
   textSubtitle: {
     width: "60%",
-    fontSize: "0.75em",
-    fontWeight: 400,
+    fontSize: "0.65em",
+    fontWeight: 600,
     opacity: "60%",
     fontFamily: "Spartan, sans-serif",
     marginTop: "1em",
@@ -92,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 600,
       opacity: "90%",
       marginTop: "2em",
-      marginBottom: "3em",
+      marginBottom: "2em",
     },
   },
   navigation: {
@@ -140,13 +141,13 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     fontFamily: "Spartan, sans-serif",
-    fontWeight: 400,
+    fontWeight: 600,
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.2em",
     },
   },
   bottomButtonContainer: {
-    marginTop: "5.35em",
+    marginTop: "5.95em",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
@@ -199,9 +200,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     width: "80%",
     margin: "0 auto",
-    fontSize: "1em",
-    marginTop: "5em",
-    marginBottom: "0.25em",
+    fontSize: "1.2em",
+    marginTop: "4em",
+    marginBottom: "1em",
     [theme.breakpoints.down("sm")]: {
       width: "90%",
       margin: "0 auto",
@@ -214,10 +215,11 @@ const useStyles = makeStyles((theme) => ({
   aboutSubtitle: {
     fontFamily: "Spartan, sans-serif",
     textAlign: "left",
-    fontWeight: 400,
+    fontWeight: 600,
     width: "80%",
     margin: "0 auto",
     fontSize: "0.75em",
+    opacity:'80%',
     [theme.breakpoints.down("sm")]: {
       width: "90%",
       margin: "2em auto",
@@ -319,7 +321,7 @@ const LandingPage = () => {
   const mobileNav = (
     <React.Fragment>
       <IconButton onClick={handleSwitch}>
-        <MenuIcon style={{color:'white', fontSize:'1.2em'}} />
+        <MenuIcon style={{color:'white', fontSize:'1em'}} />
       </IconButton>
     </React.Fragment>
   );

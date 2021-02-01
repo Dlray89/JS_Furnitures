@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     height: "30em",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      height: "44em",
+      height: "40em",
     },
   },
 

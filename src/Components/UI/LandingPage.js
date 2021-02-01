@@ -168,14 +168,25 @@ const useStyles = makeStyles((theme) => ({
       background: "#fff",
     },
   },
+  arrowButtonContainer:{
+    '&:hover':{
+      background: 'hsl(0, 0%, 63%)'
+    }
+  },
   leftIcon: {
     color: "white",
+    "&:hover":{
+      color:'hsl(0, 0%, 63%)'
+    },
     [theme.breakpoints.down("sm")]: {
       color: "black",
     },
   },
   rightIcon: {
     color: "white",
+    "&:hover":{
+      color:'hsl(0, 0%, 63%)'
+    },
     [theme.breakpoints.down("sm")]: {
       color: "black",
     },
@@ -447,6 +458,7 @@ const LandingPage = () => {
                   size="small"
                   onClick={nextHeader}
                   disabled={activeSteps === maxSteps - 1}
+                 
                 >
                   <ArrowForwardIosIcon className={classes.rightIcon} />
                 </Button>
@@ -456,6 +468,7 @@ const LandingPage = () => {
                   size="small"
                   onClick={backSteps}
                   disabled={activeSteps === 0}
+                 
                 >
                   <ArrowBackIosIcon className={classes.leftIcon} />
                 </Button>

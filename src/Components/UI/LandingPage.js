@@ -30,7 +30,7 @@ import CancelIcon from '@material-ui/icons/Cancel';
 const useStyles = makeStyles((theme) => ({
   landingpage: {},
   mainContainer: {
-    height: "24em",
+    height: "30em",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       height: "44em",

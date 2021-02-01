@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   textContainer: {
-    marginTop: "3em",
+    marginTop: "5em",
     [theme.breakpoints.down("sm")]: {
       fontSize: "0.45em",
       margin: 0,
@@ -151,7 +151,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   bottomButtonContainer: {
-    marginTop: "5.95em",
+    marginTop: "6.95em",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",

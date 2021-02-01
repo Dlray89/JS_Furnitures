@@ -271,7 +271,8 @@ const useStyles = makeStyles((theme) => ({
     '&:hover':{
       color: 'grey',
       
-    }
+    },
+    cursor:'pointer'
   },
   mobileButtonContainer:{
     width:'20%'
